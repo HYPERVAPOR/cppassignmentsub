@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作业提交系统</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>学生作业提交系统</h1>
+
+        <h2>作业提交</h2>
+        <form id="submission-form">
+            <label for="name">姓名:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="student-id">学号:</label>
+            <input type="text" id="student-id" name="student-id" required>
+
+            <label for="assignment-number">第几次作业:</label>
+            <input type="number" id="assignment-number" name="assignment-number" required>
+
+            <label for="assignment-type">作业类型:</label>
+            <select id="assignment-type" name="assignment-type" required>
+                <option value="随堂测试">随堂测试</option>
+                <option value="实验">实验</option>
+            </select>
+
+            <label for="file-upload">上传文件:</label>
+            <input type="file" id="file-upload" name="file-upload" required>
+
+            <button type="submit">提交作业</button>
+        </form>
+
+        <h2>查看提交情况</h2>
+        <form id="check-status-form">
+            <label for="check-name">姓名:</label>
+            <input type="text" id="check-name" name="check-name" required>
+
+            <label for="check-student-id">学号:</label>
+            <input type="text" id="check-student-id" name="check-student-id" required>
+
+            <button type="submit">查看提交情况</button>
+        </form>
+
+        <div id="status-result"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
