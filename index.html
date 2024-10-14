@@ -8,10 +8,10 @@
 </head>
 <body>
     <div class="container">
-        <h1>学生作业提交系统</h1>
+        <h1>程序设计13班 学生作业提交系统</h1>
 
         <h2>作业提交</h2>
-        <form id="submission-form">
+        <form id="submission-form" enctype="multipart/form-data">
             <label for="name">姓名:</label>
             <input type="text" id="name" name="name" required>
 
@@ -28,13 +28,13 @@
             </select>
 
             <label for="file-upload">上传文件:</label>
-            <input type="file" id="file-upload" name="file-upload" required>
+            <input type="file" id="file-upload" name="file-upload" accept=".docx" required> <!-- 限制只接受 .docx 文件 -->
 
             <button type="submit">提交作业</button>
         </form>
 
         <h2>查看提交情况</h2>
-        <form id="check-status-form">
+        <form id="check-status-form" onsubmit="checkStatus(event)">
             <label for="check-name">姓名:</label>
             <input type="text" id="check-name" name="check-name" required>
 
@@ -47,6 +47,7 @@
         <div id="status-result"></div>
     </div>
 
+    <p style="text-align: center; font-size: small;">使用过程中若有问题，请联系liuzhening_roeh@163.com</p>
     <script src="script.js"></script>
 </body>
 </html>
